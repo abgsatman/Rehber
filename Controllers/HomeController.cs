@@ -26,5 +26,19 @@ namespace Rehber.Controllers
 
             return View();
         }
+
+        public ActionResult MemberPage()
+        {
+            ViewBag.Title = "Member Profile Page";
+
+            return View();
+        }
+
+        public ActionResult AddMember()
+        {
+            ViewBag.Title = "Add Member";
+
+            return View();
+        }
     }
 }
