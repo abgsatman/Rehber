@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Rehber.Areas.Admin.Models.Users>
+@{
+    ViewBag.Title = "GetUserList";
+}
+
+<h2>GetUserList</h2>
+@foreach(var i in Model) {
+    @Html.DisplayFor(modelitem => i.FirstName)<br />
+}

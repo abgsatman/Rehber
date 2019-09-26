@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rehber.Areas.Admin.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,15 @@ namespace Rehber.Areas.Admin.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        UsersDBEntities UserDB = new UsersDBEntities();
+
+        public ActionResult GetUserList()
+        {
+            var model = UserDB.Users.ToList();
+
+            return View(model);
         }
     }
 }
